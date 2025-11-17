@@ -41,7 +41,15 @@ pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
-### 3. Конфигурация
+### 3. Загрузка модели
+
+Модель будет автоматически загружена при первом запуске. Если хочешь загрузить её заранее:
+
+```bash
+python download_model.py
+```
+
+### 4. Конфигурация
 
 Создай файл `.env` на основе `.env.example`:
 
@@ -53,10 +61,10 @@ cp .env.example .env
 
 ```env
 TELEGRAM_BOT_TOKEN=твой_токен_бота
-MODEL_PATH=../whisper-finetuned-kk
+MODEL_PATH=./models/whisper-finetuned-kk
 ```
 
-### 4. Получение Telegram Bot Token
+### 5. Получение Telegram Bot Token
 
 1. Откройся с [@BotFather](https://t.me/botfather) в Telegram
 2. Используй команду `/newbot`
